@@ -2,31 +2,39 @@
 
 ## Assignments
 
-- Please open the `Review.md` file and answer the questions.
-- Use Node.js and Express to design and build an API that performs CRUD operations on **projects** and **actions**.
+[]- Please open the `Review.md` file and answer the questions.
+
+[]- Use Node.js and Express to design and build an API that performs CRUD operations on **projects** and **actions**.
 
 ### Download Project Files and Install Dependencies
 
-- **Fork** and **Clone** this repository.
-- **CD into the folder** where you cloned the repository.
-- Code!
+[x]- **Fork** and **Clone** this repository.
+[x]- **CD into the folder** where you cloned the repository.
+
 
 ### Implement Requirements
 
-- Take the steps necessary to create a `package.json` to keep a record of all dependencies.
-- use _yarn_ or _npm_ to add **knex** and **sqlite3** as dependencies to the project. **This is required for database access**.
-- Configure an _npm script_ named _"start"_ that will execute your code using _nodemon_ so that the **server restarts on changes**. Make _nodemon_ be a development time dependency only, it shouldn't be deployed to production.
-- Design and build a set of endpoints that satisfy the API requirements.
-- **Use _Postman_ to test the API as you work through the exercises.**
+[x]- create a `package.json` to keep a record of all dependencies.
+
+[x]- use _yarn_ or _npm_ to add **knex** and **sqlite3** as dependencies to the project. **This is required for database access**.
+
+[x]- Configure an _npm script_ named _"start"_ that will execute your code using _nodemon_ so that the **server restarts on changes**. Make _nodemon_ be a development time dependency only, it shouldn't be deployed to production.
+
+[]- Design and build a set of endpoints that satisfy the API requirements.
+
+[]- **Use _Postman_ to test the API as you work through the exercises.**
 
 ### Database Persistence Helpers
 
 The `/data/helpers` folder includes helper files that you can use to manage the persistence of _project_ and _action_ data. These files are `projectModel.js` and `actionModel.js`. Both files publish the following api, which you can use to store, modify and retrieve each resource:
 
-- `get()`: calling get returns an array of all the resources contained in the database. If you pass an `id` to this method it will return the resource with that id if one is found.
-- `insert()`: calling insert passing it a resource object will add it to the database and return the newly created resource.
-- `update()`: accepts two arguments, the first is the `id` of the resource to update, and the second is an object with the `changes` to apply. It returns the updated resource. If a resource with the provided `id` is not found, the method returns `null`.
-- `remove()`: the remove method accepts an `id` as it's first parameter and, upon successfully deleting the resource from the database, returns the number of records deleted.
+[]- `get()`: calling get returns an array of all the resources contained in the database. If you pass an `id` to this method it will return the resource with that id if one is found.
+
+[]- `insert()`: calling insert passing it a resource object will add it to the database and return the newly created resource.
+
+[]- `update()`: accepts two arguments, the first is the `id` of the resource to update, and the second is an object with the `changes` to apply. It returns the updated resource. If a resource with the provided `id` is not found, the method returns `null`.
+
+[]- `remove()`: the remove method accepts an `id` as it's first parameter and, upon successfully deleting the resource from the database, returns the number of records deleted.
 
 The `projectModel.js` helper includes an extra method called `getProjectActions()` that takes a _project id_ as it's only argument and returns a list of all the _actions_ for the _project_.
 
@@ -59,8 +67,9 @@ Now that we have a way to add, update, remove and retrieve data from the provide
 
 Design and build the necessary endpoints to:
 
-- perform CRUD operations on _projects_ and _actions_.
-- retrieve the list of actions for a project.
+[]- perform CRUD operations on _projects_ and _actions_.
+
+[]- retrieve the list of actions for a project.
 
 ## Stretch Goal
 
