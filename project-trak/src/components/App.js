@@ -3,9 +3,10 @@ import logo from './D2rdroid2.png';
 import './App.css';
 
 // App-specific code
-import Projects from './components/Projects';
-import ProjectForm from './components/ProjectForm';
+import Projects from './Projects';
+import ProjectForm from './ProjectForm';
 import { getProjects } from '../actions';
+import { createProject } from '../actions';
 import { connect } from 'react-redux';
 
 

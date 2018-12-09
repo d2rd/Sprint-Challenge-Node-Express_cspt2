@@ -4,10 +4,10 @@ import { createProject } from '../actions';
 
 class ProjectForm extends Component {
   state = {
-    id: number, // number, no need to provide it when creating projects, the database will generate it.
+    id: 0, // number, no need to provide it when creating projects, the database will generate it.
     name: '', //  string, up to 128 characters long, required.
     description: '', // string, no size limit, required.
-    completed: boolean // yes/no
+    completed: false // t/f
   };
   
   handleInputChange = event => {
