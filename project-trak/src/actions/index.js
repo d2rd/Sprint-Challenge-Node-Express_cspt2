@@ -10,6 +10,8 @@ export const UPDATING_PROJECT = 'UPDATING_PROJECT';
 export const DELETE_PROJECT = 'DELETE_PROJECT';
 export const DELETING_PROJECT = 'DELETING_PROJECT';
 export const SINGLE_PROJECT = 'SINGLE_PROJECT';
+export const TOGGLE_UPDATE_PROJECT = 'TOGGLE_UPDATE_PROJECT';
+export const UPDATE_TARGET = 'UPDATE_TARGET';
 
 const URL = 'http://localhost:5555/api/projects';
 
@@ -66,6 +68,52 @@ export const createProject = project => {
 
 
 // update(): accepts two arguments, the first is the id of the resource to update, and the second is an object with the changes to apply. It returns the updated resource. If a resource with the provided id is not found, the method returns null.
-
+// ?? PUT ??
+export const updateSingleProject = (project, id) => {
+  return dispatch => {
+    axios.put(URL + "/update/" + id, project)
+      .then(response => {
+        console.log(response)
+        dispatch({
+            type: UPDATE_TARGET,
+            payload: response.data
+          })
+          
+        })
+        .catch(err => console.log(err.message))
+  };
+};
 
 // remove(): the remove method accepts an id as it's first parameter and, upon successfully deleting the resource from the database, returns the number of records deleted.
+// DELETE
+export const deleteProject = id => {
+  const deletedProject = axios.delete(`${URL}/delete`, {
+    data: {
+      id
+    }
+  });
+  return dispatch => {
+    dispatch({
+      type: DELETING_PROJECT
+    });
+    deletedProject
+      .then(({
+        data
+      }) => {
+        dispatch({
+          type: DELETE_PROJECT,
+          payload: data
+        });
+        dispatch({
+          type: SINGLE_PROJECT,
+          payload: {}
+        });
+      })
+      .catch(err => {
+        dispatch({
+          type: ERROR,
+          payload: err
+        });
+      });
+  };
+};

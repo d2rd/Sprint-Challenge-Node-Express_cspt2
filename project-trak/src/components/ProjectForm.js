@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { getProjects } from '../actions';
 import { createProject } from '../actions';
-
+import { updateSingleProject } from '../actions';
+import { deleteProject } from '../actions';
 class ProjectForm extends Component {
   state = {
     id: 0, // number, no need to provide it when creating projects, the database will generate it.
@@ -33,7 +35,7 @@ class ProjectForm extends Component {
           value={this.state.name}
           name="name"
           type="text"
-          placeholder="Title"
+          placeholder="Name"
           onChange={this.handleInputChange}
         />
         <input
@@ -50,7 +52,7 @@ class ProjectForm extends Component {
           type="text"
           placeholder="Description"
           onChange={this.handleInputChange}
-          value={this.state.body}
+          value={this.state.description}
         />
         
         <input
@@ -76,4 +78,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, { createProject })(ProjectForm);
+export default connect(mapStateToProps, { getProjects }, { createProject }, { updateSingleProject }, { deleteProject })(ProjectForm);
