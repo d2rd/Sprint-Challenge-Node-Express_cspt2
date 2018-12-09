@@ -64,7 +64,7 @@ Design and build the necessary endpoints to:
 
 ## Stretch Goal
 
-[]- Use `create-react-app` to create an application in a separate folder (outside the API project folder). Name it anything you want.
+[x]- Use `create-react-app` to create an application in a separate folder (outside the API project folder). Name it anything you want.
 
 []- From the React application show a list of all _projects_ using the API you built.
 

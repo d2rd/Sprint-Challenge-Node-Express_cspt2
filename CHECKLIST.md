@@ -1,10 +1,12 @@
 # Express and Node.js Sprint Challenge
+PR:  https://github.com/LambdaSchool/Sprint-Challenge-Node-Express/pull/547
+
 
 ## Assignments
 
 []- Please open the `Review.md` file and answer the questions.
 
-[]- Use Node.js and Express to design and build an API that performs CRUD operations on **projects** and **actions**.
+[x]- Use Node.js and Express to design and build an API that performs CRUD operations on **projects** and **actions**.
 
 ### Download Project Files and Install Dependencies
 
@@ -21,6 +23,7 @@
 [x]- Configure an _npm script_ named _"start"_ that will execute your code using _nodemon_ so that the **server restarts on changes**. Make _nodemon_ be a development time dependency only, it shouldn't be deployed to production.
 
 []- Design and build a set of endpoints that satisfy the API requirements.
+
 
 []- **Use _Postman_ to test the API as you work through the exercises.**
 
