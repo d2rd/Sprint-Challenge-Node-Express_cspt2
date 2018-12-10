@@ -84,6 +84,13 @@ export const updateSingleProject = (project, id) => {
   };
 };
 
+// export const toggleShowUpdate = () => {
+//   return {
+//     type: TOGGLE_UPDATE_NOTE
+//   };
+// };
+
+
 // remove(): the remove method accepts an id as it's first parameter and, upon successfully deleting the resource from the database, returns the number of records deleted.
 // DELETE
 export const deleteProject = id => {
