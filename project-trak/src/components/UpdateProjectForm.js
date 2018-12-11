@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { updateSingleProject } from '../actions';
 
 class UpdateProjectForm extends Component { 
+  // constructor(props){
+  //   super(props)}
   state = {
     title: '',
     // summary: '',
